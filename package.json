@@ -1,0 +1,23 @@
+{
+  "name": "vue-storybook-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build",
+    "storybook": "npm run build && start-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreacampaci/vue-storybook-monorepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreacampaci/vue-storybook-monorepo/issues"
+  },
+  "homepage": "https://github.com/andreacampaci/vue-storybook-monorepo#readme",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
