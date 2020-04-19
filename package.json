@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
-    "storybook": "npm run build && start-storybook"
+    "storybook": "npm run build && start-storybook",
+    "build-storybook": "npm run build && start-storybook",
+    "test": "lerna run test:unit"
   },
   "repository": {
     "type": "git",

@@ -9,8 +9,8 @@
 
     @Component
     export default class MyButton extends Vue {
-        @Prop({ default: () => 'primary'}) private color!: string;
-        @Prop({ default: () => false}) private disabled!: boolean;
+        @Prop({ default: () => 'primary'}) public color!: string;
+        @Prop({ default: () => false}) public disabled!: boolean;
 
         get buttonClass() {
             return {
@@ -20,14 +20,18 @@
             }
         }
 
-        myClick($event: any) {
-            if (this.disabled) return;
+        private eventEmit($event: any) {
             $event.target.dispatchEvent(
                 new CustomEvent("my-click", {
                         composed: true,
                         bubbles: true
                     }
                 ));
+        }
+
+        myClick($event: any) {
+            if (this.disabled) return;
+            this.eventEmit($event);
         }
     }
 </script>
